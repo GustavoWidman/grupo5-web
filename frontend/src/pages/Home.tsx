@@ -1,22 +1,5 @@
-import { useJourneyStore } from '../features/journeys'
 import { useNavigate } from 'react-router-dom'
-//import adalove from '../assets/adalove-clear.svg'
 
-type UserValues = {
-    superfit_dis: number
-	superfit_sin: number
-	superfit_cur: number
-	superfit_int: number
-	superfit_eng: number
-	superfit_res: number
-	lifestyle_classic: number
-	lifestyle_order: number
-	lifestyle_change: number
-	lifestyle_tireless: number
-	lifestyle_explorer: number
-	lifestyle_specialist: number
-	lifestyle_generalist: number
-}
 
 export const HomePage = () => {
     const navigate = useNavigate()

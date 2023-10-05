@@ -21,12 +21,13 @@ export interface JobStore {
     loading: boolean
     hasErrors: boolean
     get_jobs: (values: UserValues) => Promise<any>
+	setHasErrors: (hasErrors: boolean) => void
 }
 
 export const useJobStore = create<JobStore>()((set) => ({
     loading: false,
     hasErrors: false,
-    get_jobs: async (values) => {
+    get_jobs: async (values: any) => {
         set({ loading: true })
 	    return new Promise((resolve) => {
 			// body must be divided into superfit and lifestyle
@@ -80,5 +81,5 @@ export const useJobStore = create<JobStore>()((set) => ({
 			});
         });
     },
-	setHasErrors: (hasErrors: boolean) => set((state) => ({ hasErrors: hasErrors})),
+	setHasErrors: (hasErrors: boolean) => set({ hasErrors: hasErrors }),
 }))

@@ -25,6 +25,8 @@ export interface JourneyStore {
     hasErrors: boolean
     get_journeys_by_values: (values: UserValues) => Promise<any>
 	get_journeys_by_id: (id: number) => Promise<any>
+	setHasErrors: (hasErrors: boolean) => void
+	setLoading: (loading: boolean) => void
 }
 
 export const useJourneyStore = create<JourneyStore>()((set) => ({
