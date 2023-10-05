@@ -20,49 +20,6 @@ type UserValues = {
 
 export const HomePage = () => {
     const navigate = useNavigate()
-	const { loading: journeyLoading, hasErrors: journeyHasErrors, get_journeys_by_values, get_journeys_by_id} = useJourneyStore()
-
-
-	async function handleFetchJourneysWithValues() {
-		const values = {
-			superfit_dis: 0,
-			superfit_sin: 0,
-			superfit_cur: 0,
-			superfit_int: 0,
-			superfit_eng: 0,
-			superfit_res: 0,
-			lifestyle_classic: 0,
-			lifestyle_order: 0,
-			lifestyle_change: 0,
-			lifestyle_tireless: 0,
-			lifestyle_explorer: 0,
-			lifestyle_specialist: 0,
-			lifestyle_generalist: 0,
-			lifestyle_hybrid: 0,
-			interest: "Finanças / Contabilidade",
-			objective: "Procurar emprego"
-		}
-
-		const [success, dataOrMessage] = await get_journeys_by_values(values);
-
-		if (success) {
-			console.log("Journeys:", dataOrMessage);
-		} else {
-			console.error("Error:", dataOrMessage);
-   		}
-	}
-
-	async function handleFetchJourneysWithId() {
-		const id = 1015231
-
-		const [success, dataOrMessage] = await get_journeys_by_id(id);
-
-		if (success) {
-			console.log("Journeys:", dataOrMessage);
-		} else {
-			console.error("Error:", dataOrMessage);
-   		}
-	}
 
 
 	async function redirect_job() {

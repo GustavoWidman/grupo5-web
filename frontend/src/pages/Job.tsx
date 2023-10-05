@@ -1,5 +1,5 @@
 import { useJobStore } from '../features/gestors'
-import { useEffect, useState, useRef } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
 
 
