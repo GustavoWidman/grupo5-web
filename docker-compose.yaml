@@ -1,17 +1,20 @@
 version: '3'
 services:
   backend:
+    image: grupo5web/backend
     restart: unless-stopped
     build: ./backend
     ports:
       - '8005:8005'
 
   frontend:
+    image: grupo5web/frontend
     build: ./frontend
     restart: unless-stopped
 
   nginx:
+    image: grupo5web/nginxs
     build: ./nginx
     restart: unless-stopped
     ports:
-      - '80:80'
+      - '40483:80'
