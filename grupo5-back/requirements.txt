@@ -1,7 +1,0 @@
-pandas
-numpy
-scikit-learn==1.2.2
-fastapi[all]
-uvicorn[standard]
-keras
-tensorflow

@@ -1,0 +1,17 @@
+version: '3'
+services:
+  backend:
+    restart: unless-stopped
+    build: ./backend
+    ports:
+      - '8005:8005'
+
+  frontend:
+    build: ./frontend
+    restart: unless-stopped
+
+  nginx:
+    build: ./nginx
+    restart: unless-stopped
+    ports:
+      - '80:80'
